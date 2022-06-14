@@ -1,0 +1,133 @@
+cmd create file:
+- touch a.txt     or touch test.php etc.
+
+edit file with nano editor:
+- nano test.php
+--save file ctrl+o
+--exit file ctrl+x
+
+
+
+
+_ls__
+list file and directory
+options:
+-l -> displays the details of the files, such as size, modified date and time, the owner, and the permissions
+-a -> shows hidden files and directory
+
+
+_cd_
+change directory
+e.g: cd abc
+	 cd abc/pqr
+	cd ../..  ---> back to home directory
+	
+_touch_
+create file
+e.g: touch abc.txt     touch new.php
+
+_rm_
+remove file/directory
+rm [file name]
+e.g: rm abc.txt       rm abc
+
+To delete a folder, you need to use the -r option to remove all the files and subfolders inside it:
+
+rm -r home/test/myfolder
+
+_cat_
+display the content of a file.
+cat [file name]
+e.g: cat a.txt
+
+_pwd_
+present working directory
+
+
+_cp_
+copy files and folder
+cp [options] [source] [destination]
+
+-[source] is the file or folder you want to copy and [destination] is the duplicate.
+e.g: 
+	-Let’s say you have myfile.txt in your working directory, and you want to make a copy of it. The syntax would be:
+
+	---cp myfile.txt myfile2.txt
+	
+	-If you want to make a copy in a different folder, run the following command:
+
+	---cp /home/hostinger/myfile.txt /home/etc/
+	
+Option:
+-f — if you don’t have writing permission to the destination file, it’ll be deleted and the command will create a new file
+-u — copy the source file if it is newer than the destination file.
+-n — will not overwrite an existing file.
+-a — archive the files.
+
+
+Unlike duplicating files, copying folders requires you to use the -R (recursive) option. The option allows all folders and files inside it to be copied.
+
+cp -R /home/hostinger/myfolder /home/etc/
+
+
+_mv_
+move the file or folder instead of copying it.
+mv [source] [destination]
+
+Unlike cp command, you don’t need the -R option to move a folder. For instance:
+
+mv /home/hostinger/ftp/ /home/hostinger/myfolder/
+
+
+_grep_
+grep command looks for a given string in files.
+
+grep 'line' info.txt
+
+_vi/nano editor_
+vi [file name]
+nano [file name] 
+
+
+_history_
+display the histroy of last used command
+history 20
+
+_tar_
+tar is an SSH command that creates or extracts .tar.gz files. It is very popular because most third-party software binaries are in the .tar.gz format.
+
+To archive a folder in .tar.gz format, use the following command:
+
+tar cvzf ArchiveName.tar.gz /path/to/directory
+To unpack a .tar.gz file, enter this command:
+
+tar xvzf FileName.tar.gz
+Notice that both commands use different four-character options — cvzf and xvzf.  Each letter represents a specific instruction:
+
+x tells tar to extract files
+c tells tar to create an archive
+v stands for verbose. The option tells tar to display all file names that are processed by the command.
+z instructs tar to uncompress the archive
+f tells tar that you are supplying the name of the archive
+
+
+_wget_
+-used to download files from internet
+wget http://fileurl/filename.ext
+
+If you want to download multiple files, put all URLs into a file and use the -i option.
+
+Let’s say the file containing the links is called downloads.txt. The command will look like this:
+
+wget -i downloads.txt
+
+_du_
+du (Disk Usage) command to view the size of files and folders in a specified directory:
+
+du [directory path]
+
+
+_df_
+check disk space
+e.g: df -h 
+
